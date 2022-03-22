@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "879960411342",
+    "project_id": "ramadan-series-3b6d2",
+    "storage_bucket": "ramadan-series-3b6d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879960411342:android:a423125b3cf6e4aeebd49f",
+        "android_client_info": {
+          "package_name": "com.example.ramadanseries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879960411342-ter8ep628gmo7dnv47skd2kv3559qohu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0q9GfcRIsLW72dnFTeYeAASE1iXWI5tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879960411342-ter8ep628gmo7dnv47skd2kv3559qohu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

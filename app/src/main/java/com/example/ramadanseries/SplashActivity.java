@@ -105,13 +105,14 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String result = new String(responseBody);
-                try {
+                try {                            splashScreen();
+
                     JSONObject mainJson = new JSONObject(result);
                     isLoginDisable = mainJson.getBoolean("user_status");
                     isLoginDisable=true;
                     JSONArray jsonArray = mainJson.getJSONArray(Constant.ARRAY_NAME);
                     JSONObject objJson = jsonArray.getJSONObject(0);
-                    if (!objJson.has(Constant.MSG)) {
+                    if (objJson.has(Constant.MSG)) {
                         Toast.makeText(SplashActivity.this, objJson.getString(Constant.MSG), Toast.LENGTH_SHORT).show();
                     } else {
                      //   String packageName = objJson.getString("package_name");

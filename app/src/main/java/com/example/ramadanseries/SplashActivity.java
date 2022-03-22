@@ -115,7 +115,7 @@ public class SplashActivity extends AppCompatActivity {
                     if (objJson.has(Constant.MSG)) {
                         Toast.makeText(SplashActivity.this, objJson.getString(Constant.MSG), Toast.LENGTH_SHORT).show();
                     } else {
-                     //   String packageName = objJson.getString("package_name");
+                     // /  String packageName = objJson.getString("package_name");
                         String packageName ="com.example.ramadanseries";
 //                        Constant.isBanner = objJson.getBoolean("banner_ad");
 //                        Constant.isInterstitial = objJson.getBoolean("interstital_ad");

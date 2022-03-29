@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ramadanseries">
+    package="com.mark.ramadanseries">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.example.ramadanseries.MyApplication"
+        android:name="com.mark.ramadanseries.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.ramadanseries.SplashActivity">
+        <activity android:name="com.mark.ramadanseries.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,94 +23,94 @@
         </activity>
 
         <activity
-            android:name="com.example.ramadanseries.MainActivity"
+            android:name="com.mark.ramadanseries.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.IntroActivity"
+            android:name="com.mark.ramadanseries.IntroActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.SignInActivity"
+            android:name="com.mark.ramadanseries.SignInActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.SignUpActivity"
+            android:name="com.mark.ramadanseries.SignUpActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.ProfileActivity"
+            android:name="com.mark.ramadanseries.ProfileActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name="com.example.ramadanseries.ForgotPasswordActivity"
+            android:name="com.mark.ramadanseries.ForgotPasswordActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.MovieDetailsActivity"
+            android:name="com.mark.ramadanseries.MovieDetailsActivity"
             android:configChanges="orientation|screenLayout|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.SeriesDetailsActivity"
+            android:name="com.mark.ramadanseries.SeriesDetailsActivity"
             android:configChanges="orientation|screenLayout|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
-            android:name="com.example.ramadanseries.TVDetailsActivity"
+            android:name="com.mark.ramadanseries.TVDetailsActivity"
             android:configChanges="orientation|screenLayout|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
 
         <activity
-            android:name="com.example.ramadanseries.EmbeddedPlayerActivity"
+            android:name="com.mark.ramadanseries.EmbeddedPlayerActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensor" />
 
         <activity
-            android:name="com.example.ramadanseries.AllCommentActivity"
+            android:name="com.mark.ramadanseries.AllCommentActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <activity
-            android:name="com.example.ramadanseries.RelatedAllMovieActivity"
+            android:name="com.mark.ramadanseries.RelatedAllMovieActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.RelatedAllChannelActivity"
+            android:name="com.mark.ramadanseries.RelatedAllChannelActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.RelatedAllSeriesActivity"
+            android:name="com.mark.ramadanseries.RelatedAllSeriesActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.SearchActivity"
+            android:name="com.mark.ramadanseries.SearchActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.SearchHorizontalActivity"
+            android:name="com.mark.ramadanseries.SearchHorizontalActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.SearchAllMovieActivity"
+            android:name="com.mark.ramadanseries.SearchAllMovieActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.SearchAllChannelActivity"
+            android:name="com.mark.ramadanseries.SearchAllChannelActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.example.ramadanseries.SearchAllSeriesActivity"
+            android:name="com.mark.ramadanseries.SearchAllSeriesActivity"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -146,7 +146,7 @@
             android:value="com.example.cast.CastOptionsProvider" />
 
         <activity
-            android:name="com.example.cast.ExpandedControlsActivity"
+            android:name="com.mark.cast.ExpandedControlsActivity"
             android:theme="@style/Theme.CastVideosDark" />
 
     </application>

@@ -33,6 +33,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879960411342:android:e088093c279b3275ebd49f",
+        "android_client_info": {
+          "package_name": "com.mark.ramadanseries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879960411342-954h4m76plsl7oja3m5c30ts6fq28rul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mark.ramadanseries",
+            "certificate_hash": "2d456dded1010e2e5faa0ee42ff78272df00ef2d"
+          }
+        },
+        {
+          "client_id": "879960411342-ter8ep628gmo7dnv47skd2kv3559qohu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0q9GfcRIsLW72dnFTeYeAASE1iXWI5tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879960411342-ter8ep628gmo7dnv47skd2kv3559qohu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

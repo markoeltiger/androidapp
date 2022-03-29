@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
-        applicationId "com.example.ramadanseries"
+        applicationId "com.mark.ramadanseries"
         manifestPlaceholders = [manifestApplicationId          : "${applicationId}",
                                 onesignal_app_id               : "",
                                 onesignal_google_project_number: "REMOTE"]
         minSdkVersion 17
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.loopj.android:android-async-http:1.4.10'
+
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.ornolfr:rating-view:0.1.2@aar'

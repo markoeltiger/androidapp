@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#1c6cc3</color>
-    <color name="colorPrimaryDark">#1961af</color>
-    <color name="colorAccent">#ff9933</color>
+    <color name="colorPrimary">#FB8C00</color>
+    <color name="colorPrimaryDark">#ff9933</color>
+    <color name="colorAccent">#FFD700</color>
 
     <color name="bg">#282828</color>
-    <color name="blue">#1c6cc3</color>
+    <color name="blue">#ff9933</color>
     <color name="white">#ffffff</color>
     <color name="yellow">#ff9933</color>
 
@@ -32,7 +32,7 @@
     <color name="genre_view_bg">#80000000</color>
 
     <color name="navigation_default">#666666</color>
-    <color name="navigation_checked">#1c6cc3</color>
+    <color name="navigation_checked">#ff9933</color>
     <color name="navigation_item_bg_default">#ffffff</color>
     <color name="navigation_item_bg_checked">#f3f3f3</color>
 

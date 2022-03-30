@@ -18,6 +18,8 @@ import com.google.gson.JsonObject;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.yodo1.mas.Yodo1Mas;
+import com.yodo1.mas.helper.model.Yodo1MasAdBuildConfig;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +39,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Yodo1MasAdBuildConfig config = new Yodo1MasAdBuildConfig.Builder().enableUserPrivacyDialog(true).build();
+        Yodo1Mas.getInstance().setAdBuildConfig(config);
         IsRTL.ifSupported(this);
         myApplication = MyApplication.getInstance();
         if (NetworkUtils.isConnected(SplashActivity.this)) {
@@ -47,6 +51,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void splashScreen() {
+
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

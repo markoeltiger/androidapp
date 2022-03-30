@@ -24,7 +24,6 @@ import com.mark.item.ItemChannel;
 import com.mark.item.ItemMovie;
 import com.mark.item.ItemSeries;
 import com.mark.util.API;
-import com.mark.util.BannerAds;
 import com.mark.util.Constant;
 import com.mark.util.IsRTL;
 import com.mark.util.NetworkUtils;
@@ -82,7 +81,7 @@ public class SearchHorizontalActivity extends AppCompatActivity {
         }
 
         LinearLayout mAdViewLayout = findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
 
         Intent intent = getIntent();
         search = intent.getStringExtra("search");

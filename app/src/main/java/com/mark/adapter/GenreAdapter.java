@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.mark.item.ItemGenre;
 import com.mark.ramadanseries.R;
-import com.mark.util.PopUpAds;
 import com.mark.util.RvOnClickListener;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
@@ -55,7 +54,9 @@ public class GenreAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
+                    clickListener.onItemClick(holder.getAdapterPosition());
+
+                    //PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
                 }
             });
         }

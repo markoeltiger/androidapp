@@ -40,7 +40,7 @@ import com.mark.ramadanseries.R;
 import com.mark.ramadanseries.SeriesDetailsActivity;
 import com.mark.ramadanseries.TVDetailsActivity;
 import com.mark.util.API;
-import com.mark.util.BannerAds;
+
 import com.mark.util.Constant;
 import com.mark.util.IsRTL;
 import com.mark.util.NetworkUtils;
@@ -107,7 +107,7 @@ public class HomeFragment extends Fragment {
         databaseHelper = new DatabaseHelper(getActivity());
 
         LinearLayout mAdViewLayout = rootView.findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(getActivity(), mAdViewLayout);
+        //BannerAds.ShowBannerAds(getActivity(), mAdViewLayout);
 
         recentList = new ArrayList<>();
         movieList = new ArrayList<>();

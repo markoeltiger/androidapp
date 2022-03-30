@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mark.adapter.MovieAdapter;
 import com.mark.item.ItemMovie;
 import com.mark.util.API;
-import com.mark.util.BannerAds;
 import com.mark.util.Constant;
 import com.mark.util.EndlessRecyclerViewScrollListener;
 import com.mark.util.IsRTL;
@@ -29,6 +29,9 @@ import com.google.gson.JsonObject;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.yodo1.mas.Yodo1Mas;
+import com.yodo1.mas.error.Yodo1MasError;
+import com.yodo1.mas.event.Yodo1MasAdEvent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,7 +72,24 @@ public class RelatedAllMovieActivity extends AppCompatActivity {
         }
 
         LinearLayout mAdViewLayout = findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
+        Yodo1Mas.getInstance().setBannerListener(new Yodo1Mas.BannerListener() {
+            @Override
+            public void onAdOpened(@NonNull Yodo1MasAdEvent event) {
+
+            }
+
+            @Override
+            public void onAdError(@NonNull Yodo1MasAdEvent event, @NonNull Yodo1MasError error) {
+
+            }
+
+            @Override
+            public void onAdClosed(@NonNull Yodo1MasAdEvent event) {
+
+            }
+        });
+        Yodo1Mas.getInstance().showBannerAd(RelatedAllMovieActivity.this);
 
         Intent intent = getIntent();
         postId = intent.getStringExtra("postId");

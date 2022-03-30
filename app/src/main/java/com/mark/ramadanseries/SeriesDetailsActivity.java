@@ -24,6 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -53,7 +54,6 @@ import com.mark.item.ItemSeason;
 import com.mark.item.ItemSeries;
 import com.mark.item.ItemSubTitle;
 import com.mark.util.API;
-import com.mark.util.BannerAds;
 import com.mark.util.Constant;
 import com.mark.util.Events;
 import com.mark.util.GlobalBus;
@@ -69,6 +69,9 @@ import com.google.gson.JsonObject;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.yodo1.mas.Yodo1Mas;
+import com.yodo1.mas.error.Yodo1MasError;
+import com.yodo1.mas.event.Yodo1MasAdEvent;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONArray;
@@ -128,6 +131,46 @@ public class SeriesDetailsActivity extends AppCompatActivity implements RateDial
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_series_details);
+        Yodo1Mas.getInstance().setBannerListener(new Yodo1Mas.BannerListener() {
+            @Override
+            public void onAdOpened(@NonNull Yodo1MasAdEvent event) {
+
+            }
+
+            @Override
+            public void onAdError(@NonNull Yodo1MasAdEvent event, @NonNull Yodo1MasError error) {
+
+            }
+
+            @Override
+            public void onAdClosed(@NonNull Yodo1MasAdEvent event) {
+
+            }
+        });
+        Yodo1Mas.getInstance().showBannerAd(SeriesDetailsActivity.this);
+        Yodo1Mas.getInstance().setRewardListener(new Yodo1Mas.RewardListener() {
+            @Override
+            public void onAdOpened(@NonNull Yodo1MasAdEvent event) {
+
+            }
+
+            @Override
+            public void onAdvertRewardEarned(@NonNull Yodo1MasAdEvent event) {
+
+            }
+
+            @Override
+            public void onAdError(@NonNull Yodo1MasAdEvent event, @NonNull Yodo1MasError error) {
+
+            }
+
+            @Override
+            public void onAdClosed(@NonNull Yodo1MasAdEvent event) {
+
+            }
+        });
+        boolean isLoaded = Yodo1Mas.getInstance().isRewardedAdLoaded();
+        Yodo1Mas.getInstance().showRewardedAd(SeriesDetailsActivity.this);
         IsRTL.ifSupported(this);
         GlobalBus.getBus().register(this);
 
@@ -219,7 +262,7 @@ public class SeriesDetailsActivity extends AppCompatActivity implements RateDial
         rvComment.setFocusable(false);
         rvComment.setNestedScrollingEnabled(false);
 
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
 
         if (NetworkUtils.isConnected(SeriesDetailsActivity.this)) {
             getDetails();

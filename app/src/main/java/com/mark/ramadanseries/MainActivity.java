@@ -31,11 +31,13 @@ import com.mark.fragment.HomeFragment;
 import com.mark.fragment.MovieTabFragment;
 import com.mark.fragment.SeriesFragment;
 import com.mark.fragment.SettingFragment;
-import com.mark.util.BannerAds;
 import com.mark.util.Constant;
 import com.mark.util.IsRTL;
 import com.google.android.material.navigation.NavigationView;
 import com.ixidev.gdpr.GDPRChecker;
+import com.yodo1.mas.Yodo1Mas;
+import com.yodo1.mas.error.Yodo1MasError;
+import com.yodo1.mas.event.Yodo1MasAdEvent;
 
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
@@ -60,6 +62,34 @@ public class MainActivity extends AppCompatActivity {
         IsRTL.ifSupported(this);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Yodo1Mas.getInstance().init(this, "MRxIipLRG4", new Yodo1Mas.InitListener() {
+            @Override
+            public void onMasInitSuccessful() {
+                System.out.println("ads instialised");
+            }
+
+            @Override
+            public void onMasInitFailed(@NonNull Yodo1MasError error) {
+            }
+        });
+        Yodo1Mas.getInstance().setBannerListener(new Yodo1Mas.BannerListener() {
+            @Override
+            public void onAdOpened(@NonNull Yodo1MasAdEvent event) {
+
+            }
+
+            @Override
+            public void onAdError(@NonNull Yodo1MasAdEvent event, @NonNull Yodo1MasError error) {
+
+            }
+
+            @Override
+            public void onAdClosed(@NonNull Yodo1MasAdEvent event) {
+
+            }
+        });
+        Yodo1Mas.getInstance().showBannerAd(MainActivity.this);
+
         navigationView = findViewById(R.id.navigation_view);
         drawerLayout = findViewById(R.id.drawer_layout);
         fragmentManager = getSupportFragmentManager();
@@ -73,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 .check();
 
         LinearLayout mAdViewLayout = findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
 
         HomeFragment homeFragment = new HomeFragment();
         loadFrag(homeFragment, getString(R.string.menu_home), fragmentManager);

@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mark.adapter.ChannelAdapter;
 import com.mark.item.ItemChannel;
 import com.mark.util.API;
-import com.mark.util.BannerAds;
 import com.mark.util.Constant;
 import com.mark.util.EndlessRecyclerViewScrollListener;
 import com.mark.util.IsRTL;
@@ -69,7 +68,7 @@ public class SearchAllChannelActivity extends AppCompatActivity {
         }
 
         LinearLayout mAdViewLayout = findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
 
         Intent intent = getIntent();
         search = intent.getStringExtra("search");

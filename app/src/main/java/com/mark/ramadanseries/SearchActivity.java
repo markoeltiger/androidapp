@@ -19,7 +19,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.mark.fragment.SearchChannelFragment;
 import com.mark.fragment.SearchMovieFragment;
 import com.mark.fragment.SearchSeriesFragment;
-import com.mark.util.BannerAds;
 import com.mark.util.IsRTL;
 import com.google.android.material.tabs.TabLayout;
 
@@ -53,7 +52,7 @@ public class SearchActivity extends AppCompatActivity {
         }
 
         LinearLayout mAdViewLayout = findViewById(R.id.adView);
-        BannerAds.ShowBannerAds(this, mAdViewLayout);
+        //BannerAds.ShowBannerAds(this, mAdViewLayout);
 
         Intent intent = getIntent();
         search = intent.getStringExtra("search");

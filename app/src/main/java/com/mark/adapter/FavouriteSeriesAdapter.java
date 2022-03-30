@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.mark.item.ItemSeries;
 import com.mark.ramadanseries.R;
 import com.mark.util.NetworkUtils;
-import com.mark.util.PopUpAds;
 import com.mark.util.RvOnClickListener;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
@@ -53,7 +52,9 @@ public class FavouriteSeriesAdapter extends RecyclerView.Adapter<FavouriteSeries
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
+                clickListener.onItemClick(holder.getAdapterPosition());
+
+                //PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
             }
         });
     }

@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.mark.item.ItemChannel;
 import com.mark.ramadanseries.R;
-import com.mark.util.PopUpAds;
 import com.mark.util.RvOnClickListener;
 import com.squareup.picasso.Picasso;
 
@@ -54,7 +53,10 @@ public class ChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
+                    clickListener.onItemClick(holder.getAdapterPosition());
+                    clickListener.onItemClick(holder.getAdapterPosition());
+
+                    //PopUpAds.showInterstitialAds(mContext, holder.getAdapterPosition(), clickListener);
                 }
             });
         }

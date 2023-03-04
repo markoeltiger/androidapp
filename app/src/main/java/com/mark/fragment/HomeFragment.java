@@ -167,7 +167,10 @@ public class HomeFragment extends Fragment {
         rvRecent.setNestedScrollingEnabled(false);
 
         if (NetworkUtils.isConnected(getActivity())) {
-            getHome();
+            if (isAdded()){
+                getHome();
+
+            }
         } else {
             Toast.makeText(getActivity(), getString(R.string.conne_msg1), Toast.LENGTH_SHORT).show();
         }
@@ -176,6 +179,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getHome() {
+
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
